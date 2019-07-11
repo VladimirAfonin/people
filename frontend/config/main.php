@@ -14,6 +14,9 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -41,6 +44,22 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'user',
+                    'pluralize' => false,
+                ],
+/*
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['v1/super-films' => 'v1/film'],
+//            'controller' => 'film',
+//            'pluralize' => false // 'film' to 'films' in request url
+                ],*/
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['v2/super-films' => 'v2/film'],
+                ],
             ],
         ],
 
