@@ -43,7 +43,7 @@ class UserInfo extends \yii\db\ActiveRecord
             [['user_id', 'created_at', 'updated_at'], 'required'],
             [['user_id', 'date_birth', 'created_at', 'updated_at'], 'integer'],
             [['about_me'], 'string'],
-            [['nick_name', 'user_login', 'relation_status', 'keywords'], 'string', 'max' => 255],
+            [['nick_name', 'user_login', 'relation_status', 'keywords', 'first_name', 'middle_name', 'last_name'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
