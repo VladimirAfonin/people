@@ -28,7 +28,7 @@ class m190719_053720_add_errors_column extends Migration
             'nick_name_error' => 'Nick Name cannot be left blank',
             'birth_incorrect_error' => 'Please choose the complete date as a your birthday',
             'birth_young_error' => 'We are in process of developing this platform for younger people like you but are not ready currently. We regret inconvenience.',
-            'aboutme_error' => 'Please choose the complete date as a your birthday',
+            'aboutme_error' => 'Aboutme cannot be left blank',
         ],
         ['id' => 1]
         );
